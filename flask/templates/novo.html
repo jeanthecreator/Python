@@ -1,0 +1,36 @@
+{% extends 'template.html' %}
+{% block content %}
+<<<<<<< HEAD
+      <form action="/criar" method="post" enctype="multipart/form-data">
+        
+        <figure class="img-thumbnail col-md-4">
+          <img class="img-fluid" src="{{url_for('imagem_capa', nome_arquivo = 'capa_padrao.jpg')}}">
+          <figcaption>
+            <label for="arquivo" class="fileContainer">
+              Mudar Capa
+              <input type="file" name="arquivo" accept=".jpg">
+            </label>
+          </figcaption>
+        </figure>
+
+=======
+      <form action="/criar" method="post">
+        <input type="file" name="imagem" accept=".jpg">
+>>>>>>> 0b4c885bff55e86a596112a075016e9289e16b38
+        <fieldset>
+          <div class="form-group">
+            <label for="nome">Nome: </label>
+            <input type="text" id="nome" name="nome" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="categoria">Categoria: </label>
+            <input type="text" id="categoria" name="categoria" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="console">Plataforma: </label>
+            <input type="text" id="console" name="console" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-primary btn-salvar">Salvar</button>
+        </fieldset>
+      </form>
+      {% endblock %}
